@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <Page :current="1" :total="100"></Page>
+
     <router-view/>
   </div>
 </template>
