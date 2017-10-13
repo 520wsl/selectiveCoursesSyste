@@ -7,11 +7,14 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css';
 import store from './store'
 import Api from './api'
+import moment from 'moment'
 
 Vue.config.productionTip = false
 
 Vue.use(iView)
+
 Vue.prototype.$ajax = Api;
+Vue.prototype.$moment = moment;
 
 /* eslint-disable no-new */
 new Vue({
