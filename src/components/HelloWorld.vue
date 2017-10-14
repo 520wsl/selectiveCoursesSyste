@@ -2,12 +2,18 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     测试MadDragon
-    <br /> {{test}}
+    <div>{{test}}</div>
+    <ul>
+      <li v-for="item in operateProblemList.list" :key="item.id">
+        <p>id:{{item.id}}</p>
+        <p>name:{{item.kfname}}</p>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script scoped>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   data() {
     return {
@@ -16,16 +22,22 @@ export default {
   },
   computed: {
     ...mapState({
-      test: store => store.Public.test
+      test: store => store.Public.test,
+      operateProblemList:store => store.Public.operateProblemList,
     })
   },
   mounted() {
+    console.log(this.operateProblemList.list)
+    console.log(this.$moment().format('YYYY-MM-DD'))
+    console.log(this.$moment().format('x'))
+    this.getOperateProblemList();
     this.getData();
   },
   methods: {
+    ...mapActions(['getOperateProblemList']),
     getData() {
       this.$ajax.get('custom/operateproblem/getOperateProblemList').then((e) => {
-       console.log(e)
+        console.log(e)
       })
     }
   }
@@ -45,7 +57,6 @@ ul {
 }
 
 li {
-  display: inline-block;
   margin: 0 10px;
 }
 
