@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Page :current="1" :total="100"></Page>
+    <!-- <Page :current="1" :total="100"></Page> -->
 
     <router-view/>
   </div>
@@ -22,3 +22,4 @@ export default {
   margin-top: 60px;
 }
 </style>
+  
