@@ -22,7 +22,7 @@
     components: {UE},
     data() {
       return {
-        defaultMsg: '这里是UE测试',
+        defaultMsg: 'editor.vue?5c45:42 <p style="text-align: left; margin-bottom: 5px;">这里是U</p><p style="text-align: center; margin-bottom: 5px;"><img src="/ueditor/php/upload/image/20171015/1508063519822204.jpg" title="1508063519822204.jpg"/></p><ol class=" list-paddingleft-2" style="list-style-type: decimal;"><li><p style="line-height: normal; margin-bottom: 10px;"><img src="/ueditor/php/upload/image/20171015/1508063519100952.jpg" title="1508063519100952.jpg"/><img src="http://img.baidu.com/hi/jx2/j_0047.gif"/><img src="http://img.baidu.com/hi/jx2/j_0029.gif"/>szdfs18:44:04</p></li><li><p style="margin-bottom: 5px;">sdfsd</p></li><li><p style="margin-bottom: 5px;">sdf</p></li></ol><p style="margin-bottom: 5px;">sdf<br/></p><pre class="brush:php;toolbar:false;">h</pre><p style="margin-bottom: 5px;"><br/></p><p style="margin-bottom: 5px;"><br/></p><pre class="brush:diff;toolbar:false">sssfsdsdfsdfsdfsdf</pre><p><br/></p><p><br/></p><p style="margin-bottom: 5px;">E测试<br/></p>',
         config: {
           initialFrameWidth: null,
           initialFrameHeight: 350

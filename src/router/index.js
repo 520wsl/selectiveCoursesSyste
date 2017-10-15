@@ -3,8 +3,10 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const HelloWorld = r => require.ensure([], () => r(require('@/components/HelloWorld')), 'HelloWorld');
-const UE = r => require.ensure([], () => r(require('@/views/editor/editor')), 'editor');
+const Hello = r => require.ensure([], () => r(require('@/components/HelloWorld')), 'Hello');
+const editor = r => require.ensure([], () => r(require('@/views/editor/editor')), 'editor');
+
+const courses = r => require.ensure([], () => r(require('@/views/selective/courses')),'courses')
 
 export default new Router({
   mode: 'history',
@@ -12,12 +14,17 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: HelloWorld
+      component: Hello
     },
     {
       path: '/ue',
       name: 'ue',
-      component: UE
+      component: editor
+    },
+    {
+      path: '/courses',
+      name: 'courses',
+      component: courses
     }
   ]
 })
